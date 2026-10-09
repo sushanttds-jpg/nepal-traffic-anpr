@@ -72,6 +72,7 @@ Save your experiment notebooks in the `notebooks/` folder.
 ---
 
 ## 👤 Author
+https://github.com/sushanttds-jpg
 
 **Sushant Singh Thapa**  
 *Data Science Student*  
