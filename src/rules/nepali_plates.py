@@ -89,7 +89,7 @@ def parse_nepali_plate(raw_text: str) -> Dict[str, Any]:
     # Examples: "बागमती ०१-०२५ च ५६७८", "गण्डकी प्रदेश ०२ प १२३४"
     # Matches when province contains known province names or has provincial lot structure (xx-xxx)
     prov_names = "|".join(PROVINCES_DEVANAGARI)
-    prov_pattern = rf'^(?P<province>(?:{prov_names})(?:\s+प्रदेश)?)\s+(?P<lot>[०-९\d]{1,2}(?:-[०-९\d]{3})?)\s+(?P<cat>[क-ह])\s+(?P<num>[०-९\d]{1,4})$'
+    prov_pattern = rf'^(?P<province>(?:{prov_names})(?:\s+प्रदेश)?)\s+(?P<lot>[०-९\d]{{1,2}}(?:-[०-९\d]{{3}})?)\s+(?P<cat>[क-ह])\s+(?P<num>[०-९\d]{{1,4}})$'
     match_prov = re.match(prov_pattern, cleaned)
     if match_prov:
         cat_symbol = match_prov.group("cat")
