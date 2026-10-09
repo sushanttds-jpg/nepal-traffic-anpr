@@ -1,0 +1,32 @@
+[project]
+name = "nepal-traffic-anpr"
+version = "0.1.0"
+description = "Automatic Nepali Vehicle Number Plate Recognition and Traffic Violation Reporting Engine"
+authors = [
+    { name = "Sushant Singh Thapa", email = "sushantt.ds@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "ultralytics>=8.3.0",
+    "opencv-python-headless>=4.10.0",
+    "pillow>=10.4.0",
+    "numpy>=1.26.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pydantic>=2.8.0",
+    "python-multipart>=0.0.9",
+    "easyocr>=1.7.1",
+    "pytest>=8.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "black>=24.8.0",
+    "ruff>=0.6.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
